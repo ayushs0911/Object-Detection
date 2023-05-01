@@ -1,2 +1,1 @@
-# Object-Detection
-### Building YOLO From Scratch
+Object-Detection
