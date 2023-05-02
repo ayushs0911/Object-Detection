@@ -39,9 +39,10 @@ for img in test_images:
   results = model.predict(img, save = True)
 ```
 
-### Model Was trained for 1 epoch only. 
+### Model Was trained for 3 epochs only. 
 With additional training, it has the potential to produce improved outcomes.<br>
-![tested](https://user-images.githubusercontent.com/122048067/235652531-1fa2a9ff-2e9f-4a9b-87e2-9991d888e58f.png)
+![image](https://user-images.githubusercontent.com/122048067/235774239-4c7c3576-d9b1-45d9-aef9-fa16a9663499.png)
+
 
 **Export**
 ```
