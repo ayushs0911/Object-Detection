@@ -36,7 +36,7 @@ model = YOLO("/content/runs/detect/train/weights/best.pt")
 for img in test_images:
   results = model.predict(img, save = True)
 ```
-<img width="1204" alt="Screenshot 2023-05-02 at 3 36 28 PM" src="https://user-images.githubusercontent.com/122048067/235638894-8fb01025-3854-43ed-a182-525fe33fe077.png">
+<img width="1204" alt="Screenshot 2023-05-02 at 3 36 28 PM" src="https://user-images.githubusercontent.com/122048067/235638894-8fb01025-3854-43ed-a182-525fe33fe077.png"><br>
 **Export**
 ```
 model.export(format='onnx', dynamic=True)
