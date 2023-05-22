@@ -1,5 +1,5 @@
 # Object Detection using Yolov8 pretrained Model. 
-**Dataset**<br>
+### **Dataset**<br>
 [Arthropod Taxonomy Orders Object Detection Dataset](https://www.kaggle.com/datasets/mistag/arthropod-taxonomy-orders-object-detection-dataset)
 <br>
 <img width="487" alt="Screenshot 2023-05-02 at 3 37 07 PM" src="https://user-images.githubusercontent.com/122048067/235639008-c4c72be3-c7c6-473d-8949-a213057c6ba7.png">
@@ -8,7 +8,30 @@
 ```
 !kaggle datasets download -d mistag/arthropod-taxonomy-orders-object-detection-dataset
 ```
-**Installations** 
+## Data Handling 
+- Data came with Json file, which had classes and bounding box annotations 
+- Converted that data into Pandas DataFrame. 
+
+
+## Created YAML file of data 
+YOLOv8 model need a yaml file, which contains information about train and val. 
+```
+yaml_dict = dict(
+    train = '/content/data/train',
+    val = '/content/data/test',
+    
+    nc    = len(classes_num), # number of classes
+    names = classes_name # classes
+    )
+
+with open('/content/data.yaml', 'w') as outfile:
+    yaml.dump(yaml_dict, outfile, default_flow_style=False)
+
+%cat /content/data.yaml
+```
+
+
+##**Installations** 
 ```
 ! pip install ultralytics
 ```
